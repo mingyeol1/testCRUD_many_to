@@ -18,5 +18,7 @@ public class User {
 
     private String email;
     private String pw;
+    private boolean del;
+
 
 }
