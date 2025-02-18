@@ -17,7 +17,7 @@ public class BoardServiceImpl implements BoardService {
     @Override
     public Board register(BoardDTO boardDTO) {
 
-       User user = userRepository.findById(boardDTO.getUserId()).orElseThrow(() -> new IllegalArgumentException("비어있음"));
+       User user = userRepository.findById(boardDTO.getUserId()).orElseThrow(() -> new IllegalArgumentException("유저가 없음"));
 
 
         Board board = modelMapper.map(boardDTO, Board.class);
